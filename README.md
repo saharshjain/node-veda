@@ -4,7 +4,12 @@ Started this repo as one place to find programming interview questions solved in
 
 ## Getting Started
 
-A clone and go repository. Just got to particular folder and run the program using Node.
+A clone and go repository. Just go to particular folder and run the program using Node.
+e.g.
+
+```
+node <filename>
+```
 
 ### Prerequisites
 
