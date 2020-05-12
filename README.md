@@ -15,6 +15,14 @@ node <filename>
 
 You should have NPM and Node installed in your system.
 
+### Format
+
+A file will contain following necessary parts :
+
+* Question (commented)
+* Input and output
+* Solution(s) that you can run directly
+
 ## License
 
 This project is licensed under the GPL-3.0 - see the [LICENSE](LICENSE) file for details
