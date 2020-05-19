@@ -7,13 +7,13 @@ function binarySearch(array, low, high, searchValue) {
     return mid;
   }
   if (searchValue < array[mid]) {
-    return this.binarySearch(array, low, (mid - 1), searchValue)
+    return binarySearch(array, low, (mid - 1), searchValue)
   }
   if (searchValue > array[mid]) {
-    return this.binarySearch(array, (mid + 1), high, searchValue)
+    return binarySearch(array, (mid + 1), high, searchValue)
   }
 }
 
-module.export = {
+module.exports = {
   binarySearch
 };
