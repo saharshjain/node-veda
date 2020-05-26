@@ -23,6 +23,7 @@ function searchRotatedArray(array, searchValue) {
 }
 console.log(searchRotatedArray([4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3], 8));
 
+//linear search for pivot
 function findPivot(array) {
   for (let i = 0; i < (array.length - 1); i++) {
     if (array[i + 1] < array[i]) {
