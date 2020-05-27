@@ -1,6 +1,6 @@
 const {
   binarySearch
-} = require('../util/search-functions');
+} = require('../../util/search-functions');
 
 //A sorted array has been rotated and we have to search a value
 //Rotating  [1,2,3,4,5,6,7,8] by 5 places  will become [6,7,8,1,2,3,4,5]

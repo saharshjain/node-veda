@@ -1,6 +1,6 @@
 const {
   calculateGCD
-} = require('../util/math-functions')
+} = require('../../util/math-functions')
 
 // Rotate an array by n places
 //If we have to rotate an array by 5 places
