@@ -7,13 +7,11 @@ function zeroToEnd(array) {
   let slow = 0;
   let counter = 0;
   for (let i = 0; i < array.length; i++) {
-    counter++;
     if (array[i] == 0) {
       if (slow < i) {
         slow = i;
       }
       while (array[slow] == 0 && slow < array.length) {
-        counter++;
         slow++;
       }
       if (slow == array.length) {
