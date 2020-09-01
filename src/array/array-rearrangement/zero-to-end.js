@@ -17,8 +17,7 @@ function zeroToEnd(array) {
       if (slow == array.length) {
         break;
       }
-      array[i] = array[slow]
-      array[slow] = 0;
+      [array[i], array[slow]] = [array[slow], 0];
     }
   }
   return array;
