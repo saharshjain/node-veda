@@ -9,4 +9,4 @@ function digitInFactorial(num) {
 }
 
 
-console.log(digitInFactorial(50000000));
+console.log(digitInFactorial(5));
