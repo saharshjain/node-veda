@@ -3,22 +3,16 @@
 //e.g. array = [1,0,0,3,0,2,0,1]
 //output should be  = [1,3,2,1,0,0,0,0]
 
-function zeroToEnd(array) {
-  let slow = 0;
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] == 0) {
-      if (slow < i) {
-        slow = i;
+function zeroToEnd(arr) {
+  let index = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] != 0) {
+      if (index != i) {
+        [arr[i], arr[index]] = [arr[index], arr[i]]
       }
-      while (array[slow] == 0 && slow < array.length) {
-        slow++;
-      }
-      if (slow == array.length) {
-        break;
-      }
-      [array[i], array[slow]] = [array[slow], 0];
+      index++;
     }
   }
-  return array;
+  console.log(arr);
 }
-console.log(zeroToEnd([1, 0, 0, 3, 0, 2, 0, 1]));
+zeroToEnd([1, 0, 0, 3, 0, 2, 0, 1]);

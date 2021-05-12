@@ -20,4 +20,4 @@ function wordsFromPhoneDigits(arr, auxString, index) {
   }
 }
 
-wordsFromPhoneDigits([7, 2, 2], '', 0);
+wordsFromPhoneDigits([2, 4, 7], '', 0);
