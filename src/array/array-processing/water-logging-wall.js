@@ -5,27 +5,21 @@
 
 
 function waterLogging(arr) {
-  let left_pointer = 0;
-  let right_pointer = arr.length - 1;
-  let left_max = 0;
-  let right_max = 0;
-  let waterVolume = 0;
-  while (left_pointer <= right_pointer) {
-    if (arr[left_pointer] < arr[right_pointer]) {
-      if (arr[left_pointer] > left_max)
-        left_max = arr[left_pointer];
-      else
-        waterVolume += left_max - arr[left_pointer];
-      left_pointer++;
-    } else {
-      if (arr[right_pointer] > right_max)
-        right_max = arr[right_pointer];
-      else
-        waterVolume += right_max - arr[right_pointer];
-      right_pointer--;
-    }
+  let lMaxArr = [arr[0]];
+  let rMaxArr = [];
+  let water = 0;
+  for (let i = 1; i < arr.length; i++) {
+    lMaxArr[i] = Math.max(lMaxArr[i - 1], arr[i])
   }
-  return waterVolume;
+  rMaxArr[arr.length - 1] = arr[arr.length - 1];
+
+  for (i = arr.length - 2; i >= 0; i--) {
+    rMaxArr[i] = Math.max(rMaxArr[i + 1], arr[i])
+  }
+  for (i = 1; i < arr.length - 1; i++) {
+    water += Math.min(lMaxArr[i], rMaxArr[i] - arr[i]);
+  }
+  return water;
 }
 
 console.log(waterLogging([3, 2, 1, 2, 5, 3, 8]));
