@@ -2,7 +2,6 @@
 // use insert, replace and delete ops only
 
 function editDistance(str1, str2, m, n) {
-  console.log(m, n);
   if (m == 0) {
     return n;
   }
