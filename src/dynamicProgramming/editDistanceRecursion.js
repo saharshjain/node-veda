@@ -19,4 +19,4 @@ function editDistance(str1, str2, m, n) {
   }
 }
 
-console.log(editDistance("saharsh", "isha", 7, 4));
+console.log(editDistance("saharsh", "sangarsh", 7, 8));
